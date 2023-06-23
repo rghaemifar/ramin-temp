@@ -24,6 +24,7 @@ const MarkerSpot = (props) => {
 
   useEffect(() => {
     handleTimeChange(timesLen - 1);
+    // eslint-disable-next-line
   }, []);
 
   return (

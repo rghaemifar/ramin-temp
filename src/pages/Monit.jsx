@@ -12,7 +12,7 @@ import SensorHistory from "../component/SensorHistory";
 
 const { Text } = Typography;
 
-const Home = () => {
+const Monit = () => {
   const [sensor, setSensor] = useState([]);
 
   const hamadanLocation = [34.80302185623945, 48.50722400106659];
@@ -74,4 +74,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Monit;

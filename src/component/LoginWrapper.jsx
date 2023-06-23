@@ -5,13 +5,13 @@ import { useLocation, useNavigate } from "react-router-dom";
 const LoginWrapper = ({ children }) => {
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location);
 
   React.useEffect(() => {
     const hasToken = isLoggedIn();
     if (hasToken) return;
     navigate("/login/");
-  }, []);
+    // eslint-disable-next-line
+  }, [location.pathname]);
 
   return <>{children}</>;
 };

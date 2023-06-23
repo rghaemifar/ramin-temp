@@ -1,23 +1,24 @@
 import React from "react";
 import "./App.css";
-import { Routes, Route } from "react";
+import { Route, Routes } from "react-router";
 import "react-leaflet";
 import LoginWrapper from "./component/LoginWrapper";
 import Monit from "./pages/Monit";
+import Login from "./pages/Login";
 
 const App = () => {
   return (
     <Routes>
       <Route
         path="/"
+        exact
         element={
           <LoginWrapper>
             <Monit />
           </LoginWrapper>
         }
-      >
-        <Route path="login" element={() => <div>login</div>} />
-      </Route>
+      ></Route>
+      <Route path="login" element={<Login />} />
     </Routes>
   );
 };
